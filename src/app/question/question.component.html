@@ -1,3 +1,2 @@
-<p>what is the name of this actor?</p>
-<input type="text" name="" id="">
-<button type="submit">Answer</button>
+<input type="text" name="" id="" #answer> <!--Criando var local para passar o valor para a function-->
+<button type="submit" (click)="getResposta(answer.value)">{{ answerText }}</button> <!-- Chamada da function no click -->

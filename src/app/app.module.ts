@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpModule } from '@angular/http';
+import { ServiceQuestion } from './questions.service';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ScoreComponent } from './score/score.component';
@@ -18,9 +19,10 @@ import { NextQuestionComponent } from './next-question/next-question.component';
     NextQuestionComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [ServiceQuestion],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
